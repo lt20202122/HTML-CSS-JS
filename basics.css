@@ -1,0 +1,70 @@
+/* === TEXT === */
+.underline {
+    text-decoration: underline;
+}
+.overline {
+    text-decoration: overline;
+}
+.linethrough {
+    text-decoration: line-through;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.justify {
+    text-align: justify;
+}
+
+/* === BOXES & SPACES === */
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.rounded {
+    border-radius: 10px;
+}
+.shadow {
+    box-shadow: 2px 2px 5px gray;
+}
+.nopadding {
+    padding: 0;
+}
+.nomargin {
+    margin: 0;
+}
+
+/* === IMAGES === */
+.img-small {
+    width: 100px;
+    height: auto;
+}
+.img-medium {
+    width: 300px;
+    height: auto;
+}
+.img-large {
+    width: 600px;
+    height: auto;
+}
+.img-round {
+    border-radius: 50%;
+}
+.img-border {
+    border: 2px solid black;
+}

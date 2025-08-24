@@ -1,2 +1,2 @@
 # HTML-CSS-JS
-Websites programmed by me, preparing for earing money by website programming.
+Websites programmed by me, preparing for earning money with website programming.
