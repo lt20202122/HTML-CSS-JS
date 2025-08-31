@@ -1,0 +1,26 @@
+.buttonS {
+    color: rgb(213, 213, 213);
+    background-color: rgb(0, 36, 54); /* Green */
+    font-size: 20px;
+    text-shadow: grey0.05em 0.05em 0.1em;
+    width: 11.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+.buttonS:hover {
+    background-color: rgb(0, 50, 76);     /* dunklerer Hintergrund */
+    cursor: pointer;               /* Hand-Cursor */
+    transform: scale(1.03);        /* optional leichter Effekt */
+}
+body {
+    background: linear-gradient(135deg, #7f9059, #a1b67f);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
