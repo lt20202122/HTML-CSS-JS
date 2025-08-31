@@ -1,5 +1,5 @@
 // innitiating vars
-var max = 100, asked_num, trys=0, asked_num, correct = false
+let max = 100, asked_num, trys=0, correct = false
 const num = Math.floor(Math.random() * max)+1
 
 // 2. 3.
