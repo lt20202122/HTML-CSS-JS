@@ -1,47 +1,109 @@
+body {
+    background: linear-gradient(to bottom, #0a0a0a, #111);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eee;
+}
+
 .gameButton {
     font-size: 20px;
-    text-shadow: grey0.05em 0.05em 0.1em;
+    text-shadow: grey 0.05em 0.05em 0.1em;
     width: 11.5%;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
     cursor: pointer;
 }
+
 .gameButton:hover {
-    background-color: rgb(0, 50, 76);     /* dunklerer Hintergrund */
-    cursor: pointer;               /* Hand-Cursor */
-    transform: scale(1.03);        /* optional leichter Effekt */
+    background-color: rgb(0, 50, 76); /* dunklerer Hintergrund */
+    cursor: pointer; /* Hand-Cursor */
+    transform: scale(1.03); /* optional leichter Effekt */
 }
 
 div.CodeBreaker {
+    position: absolute; /* Bezugssystem für Kinder */
+    width: 74%;
+    height: 76%;
+    left: 3%;
+    top: 16%;
     display: flex;
-    width:74%;
-    height:76%;
-    border:1px solid black;
-    position:absolute;
-    right:10%;
-    top:22%;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,0,0.5);
+    overflow: hidden;
 }
 
+div.CodeBreaker:hover {
+    cursor: pointer; /* Hand-Cursor */
+    transform: scale(1.01); /* optional leichter Effekt */
+    box-shadow: 0 0 25px rgba(0,255,0,0.7); /* verstärkter Leuchteffekt */
+}
+
+/* unverändert von dir */
 div.ContainerOne {
     display: flex;
-    width:37%;
-    height:76%;
-    border:1px solid black;
-    position:absolute;
-    right:54%;
-    top:22%;
-    font-family: 'Arial', sans-serif;   
-    font-size: 45px;                     
-    font-weight: 600;                    
-    color: #333333;                      
-    line-height: 1.2;                    
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0,255,0,0.5), 0 0 0 4px rgba(0,255,0,0.3); /* zusätzlicher innerer Schein */
+    transition: box-shadow 0.2s, transform 0.2s;
+    left: 0%;
+    top: 0%;
+    font-family: 'Arial', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2;
     text-align: center;
+    background-color: rgb(210, 210, 210);
+    text-align: center;
+    justify-content: center; /* horizontal zentrieren */
+    align-items: center; /* vertikal zentrieren */
 }
+
+/* ContainerTwo bleibt gleich */
 div.ContainerTwo {
-    width:37%;
-    height:76%;
-    border:1px solid black;
-    position:absolute;
-    right:10%;
-    top:22%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    display: flex;
+    flex-direction: column; /* von oben nach unten */
+}
+
+/* Detektiv-Bild oben */
+img.detective {
+    width: 100%;
+    height: auto; /* bleibt unverzerrt */
+    flex-shrink: 0; /* nicht kleiner werden */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+/* Matrix-Bereich füllt den restlichen Platz */
+.matrix-container {
+    flex: 1; /* nimmt restliche Höhe ein */
+    display: flex;
+    justify-content: center; /* horizontal zentrieren */
+    align-items: center; /* vertikal zentrieren */
+    overflow: hidden; /* nichts ragt raus */
+}
+
+/* Matrix-Bild füllt Container und wird zugeschnitten */
+.matrix-container img.matrix {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Bild auf Containergröße zuschneiden */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 0 0 8px #0f0;
 }
