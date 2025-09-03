@@ -45,18 +45,16 @@ function wuerfeln() {
     phase2();
 }
 function rechnen(zahl1, zahl2, operatorSymbol) {
-    let loesung;
     if (operatorSymbol === "+") {
-        loesung = zahl1 + zahl2;
+        window.loesung = zahl1 + zahl2;
     } else if (operatorSymbol === "-") {
-        loesung = zahl1 - zahl2;
+        window.loesung = zahl1 - zahl2;
     } else if (operatorSymbol === "x") {
-        loesung = zahl1 * zahl2;
+        window.loesung = zahl1 * zahl2;
     } else {
-        loesung = zahl1 / zahl2;
+        window.loesung = zahl1 / zahl2;
     }
     console.log (loesung);
-    document.getElementById("ergebnis").innerHTML = "Lösung: " + loesung;
 }
 function phase2() {
     let w = document.getElementById("phase2");
@@ -64,16 +62,17 @@ function phase2() {
 }
 function phase3() {
     console.log("phase3");
-    let p = document.getElementById("ergebnis");
+    let p = document.getElementById("check");
     p.style.display = "block"
     let a = document.getElementById("new");
     a.style.display = "block"
     let b = document.getElementById("new");
     console.log(b);
     b.style.display = "block"
+    check_answer()
 }
 function neu() {
-    let p = document.getElementById("ergebnis");
+    let p = document.getElementById("check");
     p.style.display = "none"
     let w = document.getElementById("phase2");
     w.style.display = "none"
@@ -81,4 +80,25 @@ function neu() {
 
     wuerfeln();
 
+}
+function answer_true() {
+    let a = document.getElementById("check")
+    a.style.display = "block"
+    a.innerHTML = "Korrekt!"
+}
+function answer_false(){
+    let a = document.getElementById("check")
+    a.style.display = "block"
+    a.innerHTML = "Leider falsch! Das richtige Ergebnis wäre "+loesung+" gewesen."
+}
+
+function check_answer() {
+    let answer = document.getElementById("eingabe").value
+    console.log("answer= "+answer+" loesung= "+loesung+".")
+    if (answer == loesung) {
+        answer_true()
+    }
+    else {
+        answer_false()
+    }
 }
