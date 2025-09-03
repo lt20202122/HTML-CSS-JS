@@ -18,9 +18,26 @@ function wuerfeln() {
     // zahl1 und zahl2 würfeln
     let zahl1 = Math.floor(Math.random() * 99) + 1;
     let zahl2 = Math.floor(Math.random() * 99) + 1;
-    if (operatorSymbol === "x") {
+    if ((operatorSymbol === "x") || (operatorSymbol==":")) {
         zahl1 = Math.floor(Math.random() * 10) + 1;
         zahl2 = Math.floor(Math.random() * 10) + 1;
+    }
+    
+    if (operatorSymbol=="-") {
+        do {
+            zahl1=Math.floor(Math.random()*99)+1
+            zahl2=Math.floor(Math.random()*99)+1
+            console.log("Changed -")
+        }
+        while (zahl1<zahl2)
+    }
+    if (operatorSymbol==":") {
+        do {
+            zahl1=Math.floor(Math.random()*99)+1
+            zahl2=Math.floor(Math.random()*99)+1
+            console.log("Changed /")
+        }
+        while(zahl1%zahl2!=0)
     }
     console.log (zahl1, zahl2);
     document.getElementById("aufgabe").innerHTML = "Aufgabe: "+zahl1 + " " + operatorSymbol + " " + zahl2 + " = ?";
