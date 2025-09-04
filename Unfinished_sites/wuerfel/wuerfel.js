@@ -82,19 +82,28 @@ function neu() {
 
 }
 function answer_true() {
-    let a = document.getElementById("check")
-    a.style.display = "block"
-    a.innerHTML = "Korrekt!"
+    let b = document.getElementById("check")
+    b.style.display = "block"
+    b.innerHTML = "Korrekt!"
+    let a = Number(localStorage.getItem("Punkte"))
+    a+=10
+    localStorage.setItem("Punkte", a)
+    console.log(a)
 }
 function answer_false(){
-    let a = document.getElementById("check")
-    a.style.display = "block"
-    a.innerHTML = "Leider falsch! Das richtige Ergebnis wäre "+loesung+" gewesen."
+    console.log("False answer started")
+    let b = document.getElementById("check")
+    b.style.display = "block"
+    b.innerHTML = "Leider falsch! Das richtige Ergebnis wäre "+loesung+" gewesen."
+    let a = Number(localStorage.getItem("Punkte"))
+    a-=10
+    localStorage.setItem("Punkte", a)
+    console.log(a)
 }
 
 function check_answer() {
     let answer = document.getElementById("eingabe").value
-    console.log("answer= "+answer+" loesung= "+loesung+".")
+    console.log("answer = "+answer+" loesung = "+loesung+".")
     if (answer == loesung) {
         answer_true()
     }
