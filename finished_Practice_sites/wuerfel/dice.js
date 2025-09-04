@@ -1,6 +1,6 @@
 // Rechenart würfeln
-function wuerfeln() {
-    document.getElementById("wuerfelnB").disabled = true;
+function dice() {
+    document.getElementById("diceB").disabled = true;
     // operator würfeln
     let operator = Math.floor(Math.random() * 4);
     let operatorSymbol;
@@ -40,21 +40,21 @@ function wuerfeln() {
         while(zahl1%zahl2!=0)
     }
     console.log (zahl1, zahl2);
-    document.getElementById("aufgabe").innerHTML = "Aufgabe: "+zahl1 + " " + operatorSymbol + " " + zahl2 + " = ?";
-    rechnen(zahl1, zahl2, operatorSymbol);
+    document.getElementById("task").innerHTML = "Task: "+zahl1 + " " + operatorSymbol + " " + zahl2 + " = ?";
+    calculate(zahl1, zahl2, operatorSymbol);
     phase2();
 }
-function rechnen(zahl1, zahl2, operatorSymbol) {
+function calculate(zahl1, zahl2, operatorSymbol) {
     if (operatorSymbol === "+") {
-        window.loesung = zahl1 + zahl2;
+        window.solution = zahl1 + zahl2;
     } else if (operatorSymbol === "-") {
-        window.loesung = zahl1 - zahl2;
+        window.solution = zahl1 - zahl2;
     } else if (operatorSymbol === "x") {
-        window.loesung = zahl1 * zahl2;
+        window.solution = zahl1 * zahl2;
     } else {
-        window.loesung = zahl1 / zahl2;
+        window.solution = zahl1 / zahl2;
     }
-    console.log (loesung);
+    console.log(window.solution);
 }
 function phase2() {
     let w = document.getElementById("phase2");
@@ -62,7 +62,7 @@ function phase2() {
 }
 function phase3() {
     console.log("phase3");
-    document.getElementById("eingabe").disabled=true
+    document.getElementById("input").disabled=true
     let p = document.getElementById("check");
     p.style.display = "block"
     let a = document.getElementById("new");
@@ -72,43 +72,42 @@ function phase3() {
     b.style.display = "block"
     check_answer()
 }
-function neu() {
+function newT() {
     let p = document.getElementById("check");
     p.style.display = "none"
     let w = document.getElementById("phase2");
     w.style.display = "none"
-    document.getElementById("eingabe").value = "";
-    document.getElementById("eingabe").disabled=false
+    document.getElementById("input").value = "";
+    document.getElementById("input").disabled=false
 
-    wuerfeln();
-
+    dice();
 }
 function answer_true() {
     let b = document.getElementById("check")
     b.style.display = "block"
-    b.innerHTML = "Korrekt!"
-    let a = Number(localStorage.getItem("Punkte"))
+    b.innerHTML = "Correct!"
+    let a = Number(localStorage.getItem("points"))
     a+=10
-    localStorage.setItem("Punkte", a)
+    localStorage.setItem("points", a)
     console.log(a)
-    document.getElementById("points").innerHTML="Du hast jetzt "+a+" Punkte!"
+    document.getElementById("points").innerHTML="You now have "+a+" points!"
 }
 function answer_false(){
     console.log("False answer started")
     let b = document.getElementById("check")
     b.style.display = "block"
-    b.innerHTML = "Leider falsch! Das richtige Ergebnis wäre "+loesung+" gewesen."
-    let a = Number(localStorage.getItem("Punkte"))
+    b.innerHTML = "Thats wrong! The right answer would have been "+solution+"."
+    let a = Number(localStorage.getItem("points"))
     a-=10
-    localStorage.setItem("Punkte", a)
+    localStorage.setItem("points", a)
     console.log(a)
-    document.getElementById("points").innerHTML="Du hast jetzt "+a+" Punkte!"
+    document.getElementById("points").innerHTML="You now have "+a+" points!"
 }
 
 function check_answer() {
-    let answer = document.getElementById("eingabe").value
-    console.log("answer = "+answer+" loesung = "+loesung+".")
-    if (answer == loesung) {
+    let answer = document.getElementById("input").value
+    console.log("answer = "+answer+" solution = "+solution+".")
+    if (answer == solution) {
         answer_true()
     }
     else {

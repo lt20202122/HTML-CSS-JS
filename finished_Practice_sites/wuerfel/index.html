@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Roll</title>
+    </head>
+    <body>
+        <h1>Dice Roll</h1>
+        <p>Roll the dice and get a math task!</p>
+        <script src="dice.js"></script>
+        <button onclick="dice()", id="diceB">Roll the dice</button>
+        <div class="Phase2" id="phase2" style="display:none;">
+            <p id="task"></p>
+            <input type="text" id="input" placeholder="Answer">
+            <button onclick="phase3()">check answer</button>
+        </div>
+        <div class="Phase3">
+            <p id="check" style="display:none;"></p>
+            <button onclick="newT()" id="new" style="display:none">Next task</button>
+            <p id="check2" style="display:none;"></p>
+            <p id="points"></p>
+        </div>
+        <script>
+            function zeigePhase2() {
+                document.getElementById("phase2").style.display = "block";
+            }
+            
+        </script>
+    </body>
+</html>
+<!-- 
+
+ --->
+ 
