@@ -2,24 +2,50 @@
 <html lang=en>
     <head>
         <title>Forest bathing</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="C:\Users\Lasse\Documents\Programmieren\GitHub\HTML-CSS-JS\basic.css">
+        <link rel="stylesheet" type="text/css" href="styleFB.css">
+        <link rel="stylesheet" type="text/css" href="HTML-CSS-JS\basic.css">
         <meta charset="UTF-8">
         <meta name="keywords" content="forest bathing, relaxing, stress relief, nature">
         <meta name="description" content="Join me exploring the infite world of forest bathing, nature and its therapy"> 
         <meta name="robots" content="index, follow">
         <meta name="revisit-after" content="14 days">
-        <base href="appointments.html">
+        <!-- getting font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
         <!-- Text -->
-        <h1 class="headline" style="font-variant: small-caps; font-family: arial; font-size: 100px; color: #006100ff">Forest bathing with (name)</h1>
-        <img src="forest.jpg" width="100%" height=auto alt="picture of a tree">
-        <h2>What's it all about?</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <h2>Appointments</h2>
-        <a href="appointments.html">See appointments</a>
-        <h2>Contact</h2>
-        <a href="contact.html">Contact me</a>
+        <header>
+            <h1>Forest bathing with (name)</h1>
+            <!--<img src="forest.jpg" width="100%" height=auto alt="picture of a tree"> -->
+        </header>
+        <main>
+            <section id="about" class="about">
+                <h2 style=margin-bottom:0.1px>What is forest bathing?</h2>
+                <div class="about">
+                    <p class="text">Forest bathing is a gentle way to reconnect with nature and relax your mind. Join us for guided walks through peaceful forests, breathe deeply, and let the natural surroundings help you unwind and recharge your energy.</p>
+                </div>
+            </section>
+            <section id="appointments">
+                <h2>Appointments</h2>
+                <a href="appointments.html">See appointments</a>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <a href="contact.html">Contact me</a>
+            </section>
+        </main>
     </body>
     </html>
