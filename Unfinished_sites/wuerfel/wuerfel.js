@@ -62,6 +62,7 @@ function phase2() {
 }
 function phase3() {
     console.log("phase3");
+    document.getElementById("eingabe").disabled=true
     let p = document.getElementById("check");
     p.style.display = "block"
     let a = document.getElementById("new");
@@ -77,6 +78,7 @@ function neu() {
     let w = document.getElementById("phase2");
     w.style.display = "none"
     document.getElementById("eingabe").value = "";
+    document.getElementById("eingabe").disabled=false
 
     wuerfeln();
 
@@ -89,6 +91,7 @@ function answer_true() {
     a+=10
     localStorage.setItem("Punkte", a)
     console.log(a)
+    document.getElementById("points").innerHTML="Du hast jetzt "+a+" Punkte!"
 }
 function answer_false(){
     console.log("False answer started")
@@ -99,6 +102,7 @@ function answer_false(){
     a-=10
     localStorage.setItem("Punkte", a)
     console.log(a)
+    document.getElementById("points").innerHTML="Du hast jetzt "+a+" Punkte!"
 }
 
 function check_answer() {
