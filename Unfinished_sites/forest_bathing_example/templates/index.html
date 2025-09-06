@@ -2,12 +2,14 @@
 <html lang=en>
     <head>
         <title>Forest bathing</title>
-        <link rel="stylesheet" type="text/css" href="styleFB.css">
+        <base href="..">
+        <link rel="stylesheet" type="text/css" href="static/styleFB.css">
         <meta charset="UTF-8">
         <meta name="keywords" content="forest bathing, relaxing, stress relief, nature">
         <meta name="description" content="Join me exploring the infite world of forest bathing, nature and its therapy"> 
         <meta name="robots" content="index, follow">
         <meta name="revisit-after" content="14 days">
+        
         <!-- getting font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +17,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="icon" href="favion16.png" sizes="16x16">
-        <link rel="icon" href="favion32.png" sizes="32x32">
+        <!-- Favions -->
+        <link rel="icon" href="static/favion16.png" sizes="16x16">
+        <link rel="icon" href="static/favion32.png" sizes="32x32">
     </head>
     <body>
         <nav>
@@ -37,19 +40,19 @@
                 <h2 style=margin-bottom:0.1px>What is forest bathing?</h2>
                 <div class="about">
                     <p class="text"><b>Forest bathing is a gentle way to reconnect with nature and relax your mind.</b> Join us for guided walks through peaceful forests, breathe deeply, and let the natural surroundings help you unwind and recharge your energy.</p>
-                    <img src="forest.jpg" class="img" alt="forest">
+                    <img src="static/forest.jpg" alt="Wald" class="img" alt="forest">
                 </div>
             </section>
             <section id="appointments">
                 <h2>Book your session</h2>
                 <div class="appointmentsDIV">
-                    <img src="calendar.jpg" class="appointmentsIMG">
-                    <p class="appointmentsP">Every secound saturday afternoon! <a href="appointments.html" class="appointmentsLink"><strong>See the next session</strong></a> or <strong><a href="appointments.html #BookSession"class="appointmentsLink">book yours.</a></strong></p>
+                    <img src="static/calendar.jpg" class="appointmentsIMG">
+                    <p class="appointmentsP">Every secound saturday afternoon! <a href="/appointments" class="appointmentsLink"><strong>See the next session</strong></a> or <strong><a href="templates/appointments.html#BookSession"class="appointmentsLink">book yours.</a></strong></p>
                 </div>
             </section>
             <section id="contact">
                 <h2>Contact</h2>
-                <a href="contact.html">Contact me</a>
+                <a href="templates/contact.html">Contact me</a>
             </section>
         </main>
     </body>

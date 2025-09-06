@@ -92,3 +92,27 @@ div.appointmentsDIV {
     margin-left:20px;
     font-size: 30px;
 }
+/* Appointments */
+.headlineAP {
+    font-size:1.7em;
+    font-family:"Montserra";
+}
+.calendarOneP {
+    background-color:#e0f7e0;
+    width:vw;
+    justify-content:center;
+    text-align:center;
+    height:40px;
+    font-size:22px;
+    font-weight:500;
+}
+.calendarA {
+  all: unset;
+  cursor: pointer;
+  color: inherit; 
+  text-decoration: none;
+}
+.calendarA:hover {
+    color:#007700;
+    cursor:pointer;
+}

@@ -1,0 +1,23 @@
+<h1>Session-Admin</h1>
+<table>
+    <tr>
+        <th>Datum</th>
+        <th>Titel</th>
+        <th>Verfügbare Plätze</th>
+        <th>Aktionen</th>
+    </tr>
+    {% for s in sessions %}
+    <tr>
+        <td>{{ s[1] }}</td>
+        <td>{{ s[4] }}</td>
+        <td>{{ s[5] }}</td>
+        <td>
+            <form action="/update_slots" method="post">
+                <input type="hidden" name="id" value="{{ s[0] }}">
+                <input type="number" name="slots" min="0" value="{{ s[5] }}">
+                <button type="submit">Speichern</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

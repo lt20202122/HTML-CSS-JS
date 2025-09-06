@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Appointments</title>
+    <meta charset="utf-8">
+    <base href="..">
+    <link rel="stylesheet" href="static/styleFB.css">
+    <link rel="icon" href="static/favion16.png" sizes="16x16">
+    <link rel="icon" href="static/favion32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="headlineAP">Book your session!</h1>
+    </header>
+    <div id="calendar">
+        {% for session in sessions %}
+        <p class="calendarOneP">
+            <a class="calendarA" href="#">
+                {{ session[1] }} – {{ session[4] }} ({{ session[5] }} Plätze frei)
+            </a>
+        </p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
