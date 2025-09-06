@@ -4,6 +4,7 @@ html {
 body {
     background: linear-gradient(to right, #e0f7e0, #ffffff);
     margin-top:0px;
+    font-family:"Roboto"
 }
 nav {
     background-color:#e0f7e0;
@@ -67,4 +68,27 @@ div.about {
     font-family:"Montserrat";
     color:rgb(0, 37, 4)
 
+}
+.appointmentsLink {
+    color:#333;
+    text-decoration:none;
+}
+.appointmentsLink:hover {
+    color:#007700;
+    cursor:pointer;
+}
+div.appointmentsDIV {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.appointmentsIMG {
+    max-width:47%;
+    height:auto;
+    border-radius:12px;
+    margin-right:20px
+}
+.appointmentsP {
+    margin-left:20px;
+    font-size: 30px;
 }
