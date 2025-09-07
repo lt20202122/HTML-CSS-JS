@@ -22,7 +22,6 @@ nav ul{
 nav li {
     margin: 0 20px;
 }
-
 nav a {
     text-decoration:none;
     color:#333;
@@ -51,12 +50,18 @@ div.about {
     align-items:center;
     gap:40px;
 }
-.about .text {
+.about .text-desktop {
     flex:1;
     margin:0;
     width:50%;
 }
-.about .img {
+.about .text-mobile {
+    display:none;
+    flex:1;
+    margin:0;
+    width:50%;
+}
+.about .img-about {
     flex:2;
     max-width:50%;
     height:auto;
@@ -69,6 +74,9 @@ div.about {
     font-family:"Montserrat";
     color:rgb(0, 37, 4)
 
+}
+.appointmentsSECTION {
+    padding:8.88% 10%
 }
 .appointmentsLink {
     color:#333;
@@ -117,7 +125,6 @@ div.appointmentsDIV {
     color:#007700;
     cursor:pointer;
 }
-
 @media (max-width: 576px) {
     nav {
         height:21.2px;
@@ -137,5 +144,23 @@ div.appointmentsDIV {
     header {
         font-size:1em;
     }
-    
+    main {
+        padding:0;
+    }
+    .about-section {
+        padding: 8.88% 5%;
+    }
+    div.about {
+        margin-top:50px;
+    }
+    .about .text-desktop {
+        display:none;
+    }
+    .about .text-mobile {
+        display:block;
+    }
+    .about .img-about {
+        flex:2;
+        max-width:70%;
+    }
 }
