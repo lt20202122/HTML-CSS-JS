@@ -207,7 +207,6 @@ div.appointmentsDIV {
         max-width:70%;
     }
 }
-/* CSS */
 .bookBtwo {
   align-items: center;
   background-color: #FFFFFF;
@@ -258,4 +257,11 @@ div.appointmentsDIV {
 .xyz {
     display:flex;
     gap:20px;
+}
+footer {
+    display:flex;
+    height:400px;
+    text-align:center;
+    justify-content:center;
+    background-color:#d7f4d7;
 }
