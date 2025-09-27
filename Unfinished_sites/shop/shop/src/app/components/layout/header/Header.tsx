@@ -2,7 +2,7 @@ import Image from "next/image";
 import Greeting from "./Greeting"
 
 export default function Header () {
-    let user="Guest"
+    const user="Guest"
 
     return (
         <div className="flex gap-4">

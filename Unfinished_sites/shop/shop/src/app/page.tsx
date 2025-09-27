@@ -1,7 +1,4 @@
 import React from 'react'
-import Nav from '@/components/layout/nav/Nav'
-import { Footer } from '@/components/layout/components'
-import Header from '@/home/Header'
 import Card1 from '@/home/Card1'
 import Layout from "@/components/layout/Layout"
 
