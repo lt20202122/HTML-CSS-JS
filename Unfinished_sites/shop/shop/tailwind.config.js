@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode:"media",
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -20,6 +21,9 @@ module.exports = {
         sidebar: "sidebar",
         content: "content",
         footer: "footer"
+      },
+      fontFamily: {
+        merriweather: ['Merriweather', 'ui-serif', 'Georgia', 'serif']
       }
     }
   },

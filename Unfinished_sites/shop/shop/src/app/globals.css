@@ -1,14 +1,15 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 @theme {
-  --color-text: hsla(0,0%,20%,100%)
+  --color-text: hsla(0,0%,20%,100%);
+  --color-heading:hsl(240, 80%, 90%);
+  --color-root:hsl(0,0%,95%);
+  --color-root_dark: hsl(0,0%,5%)
 }
 
-html {
-    background-color:rgb(245, 245, 255);
-}
-body {
-    font-family: "Roboto",Arial,sans-serif;
+h1 {
+    font-family:Merriweater;
 }
 nav a {
     text-decoration:none;
