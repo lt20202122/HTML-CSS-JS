@@ -3,67 +3,11 @@
 
 @theme {
   --color-text: hsla(0,0%,20%,100%);
-  --color-heading:hsl(240, 80%, 90%);
+  --color-heading:hsl(0, 0%, 90%);
   --color-root:hsl(0,0%,95%);
-  --color-root_dark: hsl(0,0%,5%)
+  --color-root_dark: hsl(0,0%,100%)
 }
 
-h1 {
-    font-family:Merriweater;
-}
-nav a {
-    text-decoration:none;
-    color:black;
-    cursor:pointer;
-    font-weight:500;
-}
-#dropdownOne {
-    all:unset;
-    font-size:2.7rem;
-    grid-row:1;
-    grid-column:1;
-}
-#dropdownTwo {
-    all:unset;
-    font-size:2.7rem;
-    grid-row:1;
-    grid-column:2;
-}
-.dropdownTwoDIV {
-    padding:0;
-}
-#menuOne {
-    grid-row:1;
-    grid-column:1;
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    max-height:0px;
-    padding:0 10px;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    z-index:1000;
-    padding-left:0;
-}
-#menuTwo {
-    grid-row:1;
-    grid-column:2;
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    max-height:0px;
-    padding:0 10px;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    z-index:1000;
-    padding-left:0;
-}
-
-#menuOne.show {
-    max-height: 100px;
-    padding:10px;
-    padding-left:0;
-}
-#menuTwo.show {
-    max-height: 100px;
-    padding:10px;
-    padding-left:0;
+.font-merriweather {
+    font-family:Merriweater
 }
